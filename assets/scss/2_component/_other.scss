@@ -1,0 +1,267 @@
+/*------------------------------------------------------------
+other
+------------------------------------------------------------*/
+
+/* 
+------------------------------------------------------------*/
+.c-titleBlock1{
+	background: url("../image/common/line_01.png") 0 bottom repeat-x;
+	@include clear;
+	margin-top: 30px;
+
+	@include breakpoint1 {
+		background: none;
+		margin-bottom: 0;
+		cursor: pointer;
+		border-bottom: 1px solid #CCC;
+	}
+
+	&__inner{
+		@include center;
+		position: relative;
+	}
+
+	.c-title4{
+		float: left;
+		@include breakpoint1 {
+			float: none;
+			padding: 10px 0px 10px 10px;
+			background: url("../image/common/icon_01.png") 98% 47% no-repeat;
+			&.is-open{
+				@include breakpoint1 {
+					background: url("../image/common/icon_02.png") 98% 47% no-repeat;
+				}
+			}
+		}
+	}
+
+	.c-navi2{
+		float: right;
+		@include breakpoint1 {
+			float: none;
+		}
+	}
+}
+
+
+/* 
+------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+
+/* plane text 1
+------------------------------------------------------------*/
+.c-text1{
+}
+
+
+/* text block 1
+------------------------------------------------------------*/
+.c-textBlock1{
+	margin-top: 90px;
+	@include breakpoint1 {
+		margin-top: 40px;
+	}
+	p{
+		text-align: center;
+		margin-top: 30px;
+		font-size: 1.4rem;
+		@include breakpoint1 {
+			font-size: 1.2rem;
+			margin-top: 8px;
+		}
+	}
+}
+
+
+/* text block 2
+------------------------------------------------------------*/
+.c-textBlock2{
+
+	& + &{
+		margin-top: 15px;
+	}
+
+	p{
+		margin-top: 10px;
+		@include breakpoint1 {
+			font-size: 1.2rem;
+			margin-top: 5px;
+		}
+	}
+}
+
+
+
+/*------------------------------------------------------------
+img
+------------------------------------------------------------*/
+
+/* main visual 1
+------------------------------------------------------------*/
+.c-mainVisual1{
+	$root: &;
+
+	height: 446px;
+	//background-color: #f5f5f5;
+	background: #F7F7F7;
+
+	border-top:1px solid #E0E0E0;
+	border-bottom:1px solid #E0E0E0;
+
+	@include breakpoint1 {
+		height: auto;
+		padding: 0 40px;
+		border-top: 0px;
+	}
+
+
+	&__inner {
+		width: 980px;
+		margin-right: auto;
+		margin-left: auto;
+		display: table;
+		@include breakpoint1 {
+			width: auto;
+		}
+	}
+
+	&__title,
+	&__img{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+
+	&__title {
+		width: 340px;
+		color: #231815;
+		letter-spacing: 0.1em;
+		padding-left: 140px;
+		@include breakpoint1 {
+			width: 10em;
+			padding-left: 0;
+		}
+	}
+
+	&__img {
+		img{
+			width: auto;
+			max-height: 445px;
+			@include breakpoint1 {
+				max-height: initial;
+				width: 100%;
+			}
+		}
+	}	
+
+	// title
+	//--------------------------------------------------------
+	span{
+		font-size: 2.0rem;
+		@include breakpoint1 {
+			font-size: 1.0rem;
+		}
+	}
+	h2,h3,h4{
+		font-size: 3.6rem;
+		font-weight: bold;
+		@include breakpoint1 {
+			font-size: 1.6rem;
+		}
+	}
+
+
+
+	// bg1
+	//--------------------------------------------------------
+	&--bg1{
+		background: #000;
+		#{$root}__title{
+			color: #FFF;
+		}
+	}
+
+
+}
+
+
+
+
+/* main visual 2
+------------------------------------------------------------*/
+.c-mainVisual2{
+	img{
+		width: 100%;	
+		height: auto;
+	}
+}
+
+
+/* single img 1
+------------------------------------------------------------*/
+.c-singleImg1{
+	text-align: center;
+	p{
+		text-align: center;
+	}
+	img{
+	}
+}
+
+/*------------------------------------------------------------
+video
+------------------------------------------------------------*/
+
+/*  1
+------------------------------------------------------------*/
+.c-video1{
+	text-align: center;
+	margin-top: 30px;
+	iframe{
+		width: 450px;
+		height: 300px;
+		@include breakpoint1 {
+			width: 100%;
+			height: auto;
+			min-height: 200px;
+		}
+
+	}
+}
+
+
+/*------------------------------------------------------------
+bredcrumbs
+------------------------------------------------------------*/
+.c-bredcrumbs{
+	@include breakpoint1 {
+		padding: 0 $s1;
+	}
+	ul{
+		@include clear;
+	}
+	li{
+		float: left;
+		line-height: 100%;
+		&:after{
+			content:"›";
+			display: inline-block;
+			vertical-align: middle;
+			margin: -5px 7px 0 7px;
+			font-size: 1.6rem;
+			
+		}
+		&:last-child{
+			&:after{
+				content:""
+			}
+		}
+	}
+	a{
+		color: #3e3a39;
+		text-decoration: none;
+	}
+}

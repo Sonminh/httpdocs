@@ -1,0 +1,45 @@
+@import "../0_base/mixin";
+
+/*------------------------------------------------------------
+msd3-2
+------------------------------------------------------------*/
+
+/* 
+------------------------------------------------------------*/
+.p-msd3-2{
+	.c-title5{
+		img{
+			@include breakpoint1 {
+				max-width: 40px;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+/* 
+------------------------------------------------------------*/
+.p-msd3-2-1{
+	p img{
+		width: 100%;
+		height: auto;
+	}
+	.c-title6__img{
+		@include breakpoint1 {
+			width: 40px;
+		}
+	}
+	.c-title6__text{
+		@include breakpoint1 {
+			margin-left: 50px;
+		}
+	}
+	&__text1{
+		font-size: 1.4rem;
+		line-height: 1.7;
+		@include breakpoint1 {
+			font-size: 1.2rem;
+		}
+	}
+}
+

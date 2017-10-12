@@ -1,0 +1,248 @@
+/*------------------------------------------------------------
+list
+------------------------------------------------------------*/
+
+/* 1
+------------------------------------------------------------*/
+.c-list1{
+	$root: &;
+	$width1:49%;
+	$margin1:2%;
+	@include clear;
+
+	&__card{
+		float: left;
+		margin: 0 0 30px 40px;
+	}
+
+
+	// column 2
+	//-------------------------------------------------------
+	&--col2{
+		#{$root}__card{
+
+			width: 482px;
+			margin:0 0 16px 16px;
+
+			@include breakpoint1 {
+				width: $width1;
+				margin-left: $margin1;
+				margin-bottom: 15px;
+			}
+
+			&:nth-child(2n+1){
+				clear: left;
+				margin-left: 0;
+			}
+
+		}
+	}
+
+	// column 3
+	//-------------------------------------------------------
+	&--col3{
+		#{$root}__card{
+
+			width: 315px;
+			margin-left: 17px;
+			margin-bottom: 20px;
+			
+			@include breakpoint1 {
+				width: $width1;
+				margin-left: $margin1;
+				margin-bottom: 15px;
+			}
+
+			&:nth-child(3n+1){
+				clear: left;
+				margin-left: 0;
+				@include breakpoint1 {
+					clear: none;
+					margin-left: 2%;
+				}
+			}
+
+			@include breakpoint1 {
+				&:nth-child(2n+1){
+					clear: left;
+					margin-left: 0;
+				}
+			}
+
+		}
+	}
+
+	// column 4
+	//-------------------------------------------------------
+	&--col4{
+		#{$root}__card{
+
+			width: 230px;
+			margin-left: 26px;
+			margin-bottom: 20px;
+
+			@include breakpoint1 {
+				width: $width1;
+				margin-left: $margin1;
+				margin-bottom: 15px;
+			}
+			
+			&:nth-child(4n+1){
+				clear: left;
+				margin-left: 0;
+				@include breakpoint1 {
+					clear: none;
+					margin-left: 2%;
+				}
+			}
+
+			@include breakpoint1 {
+				&:nth-child(2n+1){
+					clear: left;
+					margin-left: 0;
+				}
+			}
+
+		}
+	}
+
+
+	// column 1
+	//-------------------------------------------------------
+	&--spcol1{
+		#{$root}__card{
+			@include breakpoint1 {
+				text-align: center;
+				width: 100%;
+				float: none;
+				margin-left: 0;
+			}
+		}
+	}
+
+
+
+	// img
+	//-------------------------------------------------------
+	&__img{
+		img{
+			width: 100%;
+			height: auto;
+		}
+		
+	}
+
+	// text
+	//-------------------------------------------------------
+	&__text{
+		margin-top: 15px;
+		text-align: left;
+		@include breakpoint1 {
+			margin-top: 10px;
+		}
+		
+	}
+
+	// title
+	//-------------------------------------------------------
+	&__title{
+		font-weight: bold;
+		font-size: 2.0rem;
+		@include breakpoint1 {
+			font-size: 1.2rem;
+		}
+	}
+
+	// body
+	//-------------------------------------------------------
+	&__body{
+		margin-top: 8px;
+		font-size: 1.4rem;
+		line-height: 1.7;
+		@include breakpoint1 {
+			margin-top: 4px;
+			font-size: 1.0rem;
+		}
+	}
+
+
+
+}
+
+/* 2
+------------------------------------------------------------*/
+.c-list2{
+	$root: &;
+	@include clear;
+	text-align: center;
+	margin-top: 60px;
+	@include breakpoint1 {
+		margin-top: 20px;
+	}
+
+	&__card{
+		display: inline-block;
+		margin-left: 60px;
+		&:nth-child(1){
+			margin-left: 0;
+		}
+		@include breakpoint1 {
+			width: 49%;
+			float: left;
+			margin-left: 2%;
+			margin-bottom: 15px;
+			&:nth-child(2n+1){
+				margin-left: 0;
+				clear: left;
+			}
+		}
+	}
+
+	// col1
+	//-------------------------------------------------------
+	&--col1{
+		#{$root}__card{
+			float: none;
+		}
+	}
+
+
+
+	a{
+		text-decoration: none;
+		color: #3E3A39;
+		font-size: 1.6rem;
+		font-weight: bold;
+		text-align: center;
+	}
+	&__wrap{
+		
+	}
+	&__img{
+		
+	}
+	&__text{
+		margin-top: -6px;
+		p{
+			line-height: 1.4;
+		}
+	}
+
+
+
+
+
+}
+
+
+/* 3
+------------------------------------------------------------*/
+
+
+/* 4
+------------------------------------------------------------*/
+
+
+/* 5
+------------------------------------------------------------*/
+

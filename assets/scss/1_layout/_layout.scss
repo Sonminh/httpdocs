@@ -1,0 +1,120 @@
+/*------------------------------------------------------------
+layout
+------------------------------------------------------------*/
+
+/* 
+------------------------------------------------------------*/
+body{
+	min-width: 1000px;
+	padding-top: 64px;	
+	@include breakpoint1 {
+		min-width: auto;
+		padding-top: 45px;
+		overflow: visible;
+		height: auto;
+		&.is-open{
+			overflow: hidden;
+			height: 100%;
+		}
+	}
+}
+
+/* wrapper
+------------------------------------------------------------*/
+.l-contents{
+	margin-top: 50px;
+	@include breakpoint1 {
+		margin-top: 30px;
+	}
+}
+
+
+/* wrapper
+------------------------------------------------------------*/
+.l-wrapper{
+	@include center;
+	@include breakpoint1 {
+		padding-left: $s1;
+		padding-right: $s1;
+	}
+
+	p{
+		@include breakpoint1 {
+		}
+	}
+
+}
+
+/* container
+------------------------------------------------------------*/
+.l-container{
+	@include center;
+}
+
+
+
+/* column
+------------------------------------------------------------*/
+.l-col{
+	$root: &;
+	@include clear;
+
+	&__card{
+		float: left;
+		margin: 0 0 30px 40px;
+	}
+
+	// column 2
+	//-------------------------------------------------------
+	&--2{
+		#{$root}__card{
+
+			width: 480px;
+			margin-left: 20px;
+
+			@include breakpoint1 {
+				float: none;
+				width: auto;
+				margin: 0 0 0 0;
+			}
+
+			&:nth-child(2n+1){
+				clear: left;
+				margin-left: 0;
+				@include breakpoint1 {
+					clear: none;
+					margin-left: auto;
+				}
+			}
+
+			&:nth-child(2){
+				@include breakpoint1 {
+					margin-top: 15px;
+				}
+			}
+
+
+		}
+	}
+
+	// left narrow
+	//-------------------------------------------------------
+	&--leftNarrow{
+		#{$root}__card{
+			&:nth-child(1){
+				width: 280px;
+				@include breakpoint1 {
+					width: auto;
+				}
+			}
+			&:nth-child(2){
+				width: 680px;
+				@include breakpoint1 {
+					width: auto;
+				}
+			}
+		}
+	}
+
+
+}

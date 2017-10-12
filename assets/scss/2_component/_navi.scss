@@ -1,0 +1,118 @@
+/*------------------------------------------------------------
+navi
+------------------------------------------------------------*/
+
+/* 1
+------------------------------------------------------------*/
+.c-navi1{
+	@include center;
+
+	margin-top: 60px;
+	@include breakpoint1 {
+		margin-top: 30px;
+		padding: 0 $s1;
+	}
+	
+	ul{
+		display: table;
+		width: 100%;
+		border-top: 1px solid #CCC;
+		@include breakpoint1 {
+			display: block;
+			@include clear;
+		}
+	}
+	li{
+		display: table-cell;
+		width: 25%;
+		@include breakpoint1 {
+			display: block;
+			float: left;
+			width: 50%;
+			&:nth-child(2n+1){
+				clear: left;
+			}
+		}
+
+	}
+	a{
+		text-decoration: none;
+		color:#a3a3a3;
+	}
+	div{
+		text-align: center;
+		padding: 40px 0;
+		transition: 0.3s ease-in-out;
+		@include breakpoint1 {
+			padding: 25px 0;
+		}
+		&:hover{
+			opacity: 0.6;
+		}
+		
+	}
+	i{
+		font-size: 4rem;
+	}
+	p{
+		color: #333;
+		font-size: 1.2rem;
+		margin-top: 6px;
+	}
+}
+
+/* 2
+------------------------------------------------------------*/
+.c-navi2{
+
+	@include breakpoint1 {
+		position: absolute;
+		width: 100%;
+		display: none;
+	}
+
+	ul{
+		display: table;
+		border-top:1px solid #E0E0E0;
+		border-left:1px solid #E0E0E0;
+		@include breakpoint1 {
+			border: 0px;
+			border-top:1px solid #E0E0E0;
+			display: block;
+			background: #FFF;
+		}
+	
+	}
+
+	li{
+		display: table-cell;
+		border-right:1px solid #E0E0E0;
+		vertical-align: middle;
+		@include breakpoint1 {
+			border: 0px;
+			display: block;
+			border-bottom: 1px solid #CCC;
+		}
+	
+		&.is-active{
+			border-bottom: 1px solid #FFF;
+			@include breakpoint1 {
+				border-bottom: 1px solid #CCC;
+			}
+		}
+
+	}
+
+	a{
+		font-size: 1.1rem;
+		color: #727171;
+		text-decoration: none;
+		display: block;
+		line-height: 1.3;
+		padding: 15px 20px 15px 20px;
+		@include breakpoint1 {
+			padding: 15px 0 15px 10px;
+		}
+	}
+
+}

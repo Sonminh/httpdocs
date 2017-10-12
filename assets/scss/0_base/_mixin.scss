@@ -1,0 +1,102 @@
+//============================================
+// vars
+//============================================
+
+//baseWidth
+$baseWidth1:980px;
+
+// Breakpoint
+$breakpoint1:767px;
+$breakpoint2:480px;
+
+// Common Colors
+//$color1:#;
+//$color2:#;
+//$color3:#;
+
+// link color
+//$link:#;
+//$hover:#;
+//$active:#;
+//$visited:#;
+
+// sp side padding
+$s1:10px;
+
+
+//============================================
+// サイト幅でセンタリング
+//============================================
+@mixin center{
+	width: $baseWidth1;
+	margin-left: auto;
+	margin-right: auto;
+	@include breakpoint1 {
+		width: auto;
+	}
+}
+
+@mixin center2{
+	width: $baseWidth2;
+	margin-left: auto;
+	margin-right: auto;
+	@include breakpoint1 {
+		width: auto;
+	}
+}
+
+
+//============================================
+// テキスト置換
+//============================================
+//@mixin hide_text {
+//	display: block;
+//	white-space: nowrap;
+//	text-indent: 100%;
+//	overflow: hidden;
+//}
+
+//============================================
+// jQueryAutoHeight.jsにて揃えられたmin-heightをリセット
+// PCサイトでは高さを揃えるが、スマホサイトでは高さ自由にする場合など。
+//==============================================*/
+//@mixin reset_height {
+//	min-height: initial !important;
+//	min-height: auto !important;
+//}
+
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+	*zoom: 1;
+	&:after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+
+//============================================
+// フォント
+//============================================
+@mixin mincyo() {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+//============================================
+// breakpoint
+//============================================
+
+@mixin breakpoint1 {
+ 	@media screen and (max-width: #{$breakpoint1}) {
+    @content;
+ 	}
+}
+
+@mixin breakpoint2 {
+ 	@media screen and (max-width: #{$breakpoint2}) {
+    @content;
+ 	}
+}

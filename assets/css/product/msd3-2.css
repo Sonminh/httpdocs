@@ -1,0 +1,41 @@
+/*------------------------------------------------------------
+msd3-2
+------------------------------------------------------------*/
+/* 
+------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .p-msd3-2 .c-title5 img {
+    max-width: 40px;
+    margin-right: 10px;
+  }
+}
+
+/* 
+------------------------------------------------------------*/
+.p-msd3-2-1 p img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .p-msd3-2-1 .c-title6__img {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p-msd3-2-1 .c-title6__text {
+    margin-left: 50px;
+  }
+}
+
+.p-msd3-2-1__text1 {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 767px) {
+  .p-msd3-2-1__text1 {
+    font-size: 1.2rem;
+  }
+}
